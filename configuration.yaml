@@ -1,0 +1,66 @@
+homeassistant:
+  name: Home
+  time_zone: America/Chicago
+  unit_system: imperial
+
+  # Secrets
+  elevation: !secret homeassistant_elevation
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+
+  customize: !include_dir_merge_named customize
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_api_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+light:
+  - platform: lifx
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather Prediction
+sensor:
+#  platform: yr
+  - platform: darksky
+    api_key: !secret sensor_darksky_api_key
+    monitored_conditions:
+      - summary
+      - temperature_max
+      - temperature_min
+    units: us
+
+# Text to speech
+tts:
+  platform: google
+
+isy994:
+  host: http://192.168.86.2:80
+  username: !secret isy994_username
+  password: !secret isy994_password
+
+group: !include group.yaml

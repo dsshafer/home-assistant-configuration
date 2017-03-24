@@ -1,0 +1,8 @@
+binary_sensor.water_sensor_1_dry:
+  hidden: true
+binary_sensor.water_sensor_1_heartbeat:
+  friendly_name: Basement Water Sensor Heartbeat
+  device_class: connectivity
+binary_sensor.water_sensor_1_wet:
+  friendly_name: Basement Water Sensor
+  device_class: moisture

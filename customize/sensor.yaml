@@ -1,0 +1,6 @@
+sensor.dark_sky_daily_high_temperature:
+  friendly_name: Today's High
+sensor.dark_sky_daily_low_temperature:
+  friendly_name: Today's Low
+sensor.dark_sky_summary:
+  friendly_name: Current Conditions

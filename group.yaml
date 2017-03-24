@@ -1,0 +1,48 @@
+Basement:
+  name: Basement
+  entities:
+    - group.basement_lights
+    - media_player.family_room
+    - media_player.gym
+    - binary_sensor.water_sensor_1_heartbeat
+    - binary_sensor.water_sensor_1_wet
+
+Basement Lights:
+    - light.bonus_room_1
+    - light.bonus_room_2
+    - light.family_room_1
+    - light.family_room_2
+    - light.family_room_3
+    - light.game_table
+    - light.gym
+    - light.utility_room_1
+    - light.utility_room_2
+
+Living Room:
+    - media_player.living_room
+    - media_player.living_room_tv
+
+Guest Bedroom:
+  entities:
+    - switch.fan
+
+Master Bedroom:
+  entities:
+    - light.barrys_lamp
+    - light.davids_lamp
+    - media_player.bedroom_apple_tv
+    - switch.fan_3
+
+Office:
+  entities:
+    - light.lamp
+
+Rooms:
+  view: yes
+  name: Rooms
+  entities:
+    - group.basement
+    - group.guest_bedroom
+    - group.living_room
+    - group.master_bedroom
+    - group.office
